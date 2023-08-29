@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="wrapper w-[100vw] h-[100vh] bg-gradient-to-r from-fuchsia-900 to-violet-900 flex justify-center items-center text-white">
+        <div class="container w-[80%] max-w-[350px] ">
+            <h1 class="my-4 text-gray-300 uppercase text-2xl font-semibold tracking-widest text-center">Password generator</h1>
+            <div class="Password-container bg-violet-950 relative h-11 border-b-4 border-pink-900 rounded-md">
+                <input class="text-yellow-300 text-bold tracking-wider border-0 outline-0 absolute top-2 left-3 bg-transparent w-full" placeholder="Password" type="text" readonly data-msg  >
+                <div   copy-msg></div>
+                <div class="text-blue-300 rotate-180 absolute right-3 top-2 ">
+                    <i  copy-btn class="fa-regular fa-copy"></i>
+                </div>
+                
+
+            </div  >
+            <div class="input-container space-y-3  bg-violet-950 p-4 my-5 rounded-md">
+                <div class="length flex justify-between">
+                    <p>Password Length</p>
+                    <div class="text-yellow-400" password-display></div>
+                </div>
+
+                
+                <input class="w-full  accent-pink-900  rounded-md " input-slider type="range"  name="" min="1" max="20" step="1" id="">
+                <br>
+                
+
+                <input  type="checkbox" name="" id="uppercase">
+                <label for="uppercase">Include Uppercase Characters </label>
+                <br>
+
+                <input type="checkbox" name="" id="lowercase">
+                <label for="lowercase">Include Lowercase Characters </label>
+                <br>
+
+                <input type="checkbox" name="" id="numbers">
+                <label for="numbers">Include Numbers </label>
+                <br>
+
+                <input type="checkbox" name="" id="symbols">
+                <label for="symbols">Include Symbols </label>
+                <br>
+
+
+                <div class="strength flex justify-between">
+                    <p>Strength</p>
+                    <div class="h-5 w-5 rounded-full strength1" ></div>
+                </div>
+
+                <button class="bg-pink-900 px-5 py-3 tracking-widest w-full uppercase border-b-4 border-yellow-400 rounded-md text-yellow-200" generate-button>Generate Password</button>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
